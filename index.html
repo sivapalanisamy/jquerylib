@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>:: Brillersys ::</title>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="container">
+	
+	<h1>Census List</h1>	
+	<div class="pagination">
+		<div class="count"><b>1 - 15</b> 0f <span>20</span></div>
+		<div class="controls">
+			<a class="first" href="">First</a>
+			<a class="prev" href="">Prev</a>
+			<a class="next" href="">Next</a>
+			<a class="last" href="">Last</a>
+		</div>
+	</div>
+	<div class="visible-sort">
+		<label>Sort By</label>
+		<ul>
+			<li title="_id">NO</li>
+			<li title="city">City</li>
+			<li title="state">State</li>
+			<li title="pop">Population</li>
+			<li title="loc">Location</li>
+		</ul>
+	</div>
+	<div id="loader"></div>
+	<table class="census-table">
+		<thead>
+			<tr>
+				<th id="no" title="_id">NO</th>
+				<th id="city" title="city">City</th>
+				<th id="state" title="state">State</th>
+				<th id="pop" title="pop">Population</th>
+				<th id="loc" title="loc">Location</th>
+			</tr>
+		</thead>			
+		<tbody>			
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/mycensus.js"></script>
+</body>
+</html>

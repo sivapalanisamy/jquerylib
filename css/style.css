@@ -1,0 +1,188 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size:14px;
+	color:#000000;
+}
+* {
+  box-sizing: border-box;
+}
+ol,ul,li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+h1, h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+}
+#container{	
+	width:100%;
+	max-width:1200px;
+	margin:0px auto 10px;
+	padding:20px;
+	position:relative;
+}
+#container h1{
+	margin:20px 0px;
+}
+#loader{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../images/loader.gif') no-repeat 50% #FFFFFF;
+	text-align: center;
+	z-index:999;
+	left:0;
+}
+.pagination{
+	width:100%;
+	display:inline-block;
+	margin-bottom:20px;	
+	font-size:14px;
+	padding:15px;
+	background:#225768;
+	color:#FFFFFF;
+}
+.pagination .count{	
+	display: inline-block;
+}
+.pagination .controls{
+	float:right;
+}
+.pagination .controls a{
+	color:#FFFFFF;
+	padding:0px 12px;
+	display:inline-block;
+	position:relative;
+}
+.pagination .controls a.first{
+	padding-left:20px;
+}
+.pagination .controls a.last{
+	padding-right:20px;
+}
+.pagination .controls a.first:before, 
+.pagination .controls a.prev:before{
+	content:"\003c";
+	position:absolute;
+	left:0;
+}
+.pagination .controls a.first:before{
+	content:"\003c""\003c";
+}
+.pagination .controls a.next:after, 
+.pagination .controls a.last:after{
+	content:"\003e";
+	position:absolute;
+	right:0;
+}
+.pagination .controls a.last:after{
+	content:"\003e""\003e";
+}
+.pagination .controls a:hover{
+	color:#1fcdff;
+}
+.visible-sort{
+	display:none;
+}
+table{
+	width: 100%;
+    border-collapse: collapse;
+}
+tr:nth-of-type(2n+2) {
+    background: #F0F0F0;
+}
+td, th {
+    padding: 10px;
+    border: 1px solid #D1D1D1;
+    text-align: left;
+}
+th {
+    background: #808080;
+	border: 1px solid #8d8d8d;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+th.sort{
+	cursor:pointer;
+}
+th.sort:after{
+	content:" \25BC";
+	font-size:11px;
+}
+@media screen and (max-width: 767px) {
+	.sort-by{
+		display: inline-block;
+		border: 1px solid #e1e1e1;
+		position: relative;
+		padding: 10px 15px;
+		float: right;
+		clear: both;
+		margin-bottom: 20px;
+	}
+	.sort-by label:after{
+		content: " \25BC";
+		font-size:12px;
+	}
+	.sort-by ul{
+		position: absolute;
+		background: #FFFFFF;    
+		right: -1px;
+		border: 1px #e1e1e1 solid;
+		z-index: 9;
+		top:30px;
+		display:none;
+	}
+	.sort-by ul li{
+		padding: 5px 15px;
+	}
+	table, tbody, td, tr {
+		display: block;
+		clear:both;
+	}
+	thead{
+		display:none;
+	}
+	tr {
+		border: 1px solid #e1e1e1;
+	}
+	tr:nth-of-type(2n+2) {
+		border-width: 0px 1px;
+	}
+	td {
+		border: none;
+		border-bottom: 1px solid #e1e1e1;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	table td:before{
+		content: attr(title);
+		float: left;
+		text-transform: uppercase;
+		position:absolute;
+		left:15px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.pagination{
+		text-align:center;
+	}
+	.pagination .count{
+		display:block;
+		margin-bottom:5px;
+	}
+	.pagination .controls{
+		width:100%;
+		opacity: 0.8;
+	}
+	.pagination .controls a{
+		margin:0;
+		padding:0px 10px;
+	}	
+}
